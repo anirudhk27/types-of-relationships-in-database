@@ -1,0 +1,9 @@
+create table homework_submissions(
+	id int,
+	marks int,
+	foreign key (id) references student(id)
+);
+
+select *
+from student join homework_submissions
+on student.id=homework_submissions.id
